@@ -5,8 +5,14 @@
     "manifest_version": 3,
     "action": {
       "default_popup": "popup.html",
-      "default_icon": "bitbucket-shovel.png"
+      "default_icon": "shovel.png"
     },
+    "content_scripts": [
+      {
+        "matches": ["https://git.mobi.mobicorp.ch/*"],
+        "js": ["jquery-3.7.1.min.js", "content-script.js"]
+      }
+    ],
     "permissions": [
       "storage"
     ]
